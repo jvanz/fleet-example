@@ -1,10 +1,13 @@
-defaultNamespace: kubewarden
+# defaultNamespace: kubewarden
 
 helm:
   releaseName: kubewarden-crds
   chart: kubewarden-crds
   repo: https://charts.kubewarden.io
   version: 1.25.1
+  values:
+    installPolicyReportCRDs: false
+    installOpenReportsCRDs: false
 
 labels:
   app: kubewarden-crds
