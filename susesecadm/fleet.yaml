@@ -1,0 +1,13 @@
+defaultNamespace: susesec
+
+helm:
+  releaseName: ssac
+  chart: suse-security-admission-controller
+  repo: https://charts.kubewarden.io
+  version: 1.25.1
+  values:
+    installPolicyReportCRDs: false
+    installOpenReportsCRDs: false
+
+labels:
+  app: kubewarden-crds
