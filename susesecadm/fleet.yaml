@@ -3,7 +3,7 @@ defaultNamespace: susesec
 helm:
   releaseName: ssac
   chart: suse-security-admission-controller
-  repo: https://charts.kubewarden.io
+  repo: oci://dp.apps.rancher.io/charts/
   version: 1.25.1
   values:
     installPolicyReportCRDs: false
