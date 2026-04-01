@@ -15,8 +15,8 @@ helm:
   version: 5.11.1
   values:
     auditScanner:
-      enable: true
-      policyReporter: true
+      enable: false
+      policyReporter: false
 
 labels:
   app: kubewarden-controller
