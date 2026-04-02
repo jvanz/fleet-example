@@ -1,13 +1,20 @@
-defaultNamespace: susesec
+defaultNamespace: default
 
 helm:
   releaseName: ssac
-  chart: suse-security-admission-controller
-  repo: oci://dp.apps.rancher.io/charts/
+  repo: oci://dp.apps.rancher.io/charts/suse-security-admission-controller
   version: 0.5.1
   values:
-    installPolicyReportCRDs: false
-    installOpenReportsCRDs: false
-
-labels:
-  app: kubewarden-crds
+    global:
+      "*": null
+      imagePullSecrets: []
+      imageRegistry: ""
+    kubewarden-controller:
+      "*": null
+      enabled: true
+    kubewarden-crds:
+      "*": null
+      enabled: true
+    kubewarden-defaults:
+      "*": null
+      enabled: true
